@@ -112,7 +112,7 @@ async def chat_endpoint(text: str = Form(None), file: UploadFile = Form(None), s
         if chat_session is None:
             client = genai.Client(api_key=API_KEY)
             chat_session = client.chats.create(
-                model='gemini-2.5-flash',
+                model='gemini-3.8-flash',
                 config=types.GenerateContentConfig(
                     system_instruction="You are a proactive, critical, and subjective AI research agent. Do not act like a passive, agreeable assistant. Actively interrogate assumptions, argue against weak premises, provide rigorous pushback, and debate fiercely. Detect the language of the user's input (Persian, Norwegian, English, etc.) and always reply in that same language. You must conclude every single response with a provocative, challenging question that forces deeper intellectual friction."
                 )
